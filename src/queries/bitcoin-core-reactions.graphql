@@ -1,0 +1,39 @@
+query GetReactions($issueCursor: String, $commentCursor: String, $reactionCursor: String) {
+  repository(owner: "bitcoin", name: "bitcoin") {
+    issues(first: 10, after: $issueCursor) {
+      edges {
+        node {
+          comments(first: 10, after: $commentCursor) {
+            edges {
+              node {
+                reactions(first: 10, after: $reactionCursor) {
+                  edges {
+                    node {
+                      content
+                      user {
+                        login
+                      }
+                    }
+                  }
+                  pageInfo {
+                    endCursor
+                    hasNextPage
+                  }
+                }
+                createdAt
+              }
+            }
+            pageInfo {
+              endCursor
+              hasNextPage
+            }
+          }
+        }
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

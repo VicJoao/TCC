@@ -4402,7 +4402,7 @@ type CodeOfConduct implements Node {
 }
 
 """
-Choose which tools must provide code scanning results before the reference is
+Choose which simple_test_bitcoincore must provide code scanning results before the reference is
 updated. When configured, code scanning must be enabled and have results for
 both the commit and the reference being updated.
 """
@@ -4414,7 +4414,7 @@ type CodeScanningParameters {
 }
 
 """
-Choose which tools must provide code scanning results before the reference is
+Choose which simple_test_bitcoincore must provide code scanning results before the reference is
 updated. When configured, code scanning must be enabled and have results for
 both the commit and the reference being updated.
 """
@@ -47694,7 +47694,7 @@ enum RepositoryRuleType {
   BRANCH_NAME_PATTERN
 
   """
-  Choose which tools must provide code scanning results before the reference is
+  Choose which simple_test_bitcoincore must provide code scanning results before the reference is
   updated. When configured, code scanning must be enabled and have results for
   both the commit and the reference being updated.
   """
